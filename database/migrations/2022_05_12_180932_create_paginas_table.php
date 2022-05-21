@@ -17,11 +17,9 @@ class CreatePaginasTable extends Migration
             $table->id();
             $table->string('Nombre_pagina');
             $table->string('url');
-            $table->dateTime('Fecha_inicio');
-            $table->string('Dias_noserepiten');
-            $table->dateTime('Fecha_final');
-            $table->Time('Hora_inicio');
-            $table->Time('Hora_final');
+            $table->dateTime('Fechas')->nullable();
+            $table->Time('Hora_inicio')->nullable();
+            $table->Time('Hora_final')->nullable();
         });
     }
 

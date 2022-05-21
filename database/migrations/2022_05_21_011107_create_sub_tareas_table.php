@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTareasTable extends Migration
+class CreateSubTareasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateTareasTable extends Migration
      */
     public function up()
     {
-        Schema::create('tareas', function (Blueprint $table) {
+        Schema::create('sub_tareas', function (Blueprint $table) {
             $table->id();
             $table->string('Titulo_tarea');
             $table->string('Detalle_tarea')->nullable();
             $table->dateTime('Fecha')->nullable();
             $table->Time('Hora')->nullable();
             $table->string('Estado')->nullable();
-
         });
     }
 
@@ -31,6 +30,6 @@ class CreateTareasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tareas');
+        Schema::dropIfExists('sub_tareas');
     }
 }
